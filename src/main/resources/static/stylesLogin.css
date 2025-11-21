@@ -26,7 +26,7 @@
 }
 
 .logo-img {
-    height: 70px;   /* adjust size */
+    height: 70px;
     width: 70px;
     margin-top: 20px;
     margin-left: 50px;
@@ -93,8 +93,8 @@
     position: absolute;
     display: flex;
     flex-direction: column;
-    align-items: center;      /* center horizontally */
-    justify-content: center;  /* center vertically */
+    align-items: center;
+    justify-content: center;
     text-align: center; 
     top: -20px;
     margin-top: 200px;
@@ -125,14 +125,14 @@
 }
 
 .loginSetup .setUp-right .remember-container .remember-box {
-    width: 10px;        /* change size easily */
-    height: 10px;       /* change size easily */
+    width: 10px;
+    height: 10px;
     cursor: pointer;
 }
 
 .loginSetup .setUp-right .remember-container .remember-text {
-    font-size: 14px;    /* change text size */
-    cursor: pointer;    /* makes it act like a label */
+    font-size: 14px;
+    cursor: pointer;
     user-select: none;
     margin-right: 100px;
     margin-top: 30px;
@@ -253,16 +253,16 @@
 
 .loginSetup .setUp-right .iconSocial {
     display: flex;
-    flex-direction: column; /* puts buttons in 2 lines */
-    gap: 10px; /* space between buttons */
-    width: 200px; /* optional width */
+    flex-direction: column;
+    gap: 10px;
+    width: 200px;
 }
 
 .loginSetup .setUp-right .iconSocial .social-btn {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 8px; /* space between icon and text */
+    gap: 8px;
     padding: 10px;
     font-size: 16px;
     cursor: pointer;

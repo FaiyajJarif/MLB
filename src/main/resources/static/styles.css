@@ -13,7 +13,6 @@
     z-index: 1;
 }
 
-/* ONLY CHANGE TOP 100PX COLOR */
 .main::before {
     content: "";
     position: absolute;
@@ -21,7 +20,7 @@
     left: 0;
     width: 100%;
     height: 100px; 
-    background: rgba(255, 255, 255, 0.5); /* <-- your custom top color */
+    background: rgba(255, 255, 255, 0.5);
     z-index: -1; 
 }
 
@@ -40,7 +39,7 @@
 
 
 .logo-img {
-    height: 70px;   /* adjust size */
+    height: 70px;
     width: 70px;
     margin-top: 20px;
     mix-blend-mode: multiply;
@@ -68,7 +67,7 @@
     margin-left: 62px;
     margin-top: 50px;
     font-size: 18px;
-    position: relative; /* Needed for dropdown positioning */
+    position: relative;
 }
 
 .menu ul li a {
@@ -84,12 +83,11 @@
     border-bottom: 2px solid #2985cb;
     padding-bottom: 5px;
 }
-/* ---- DROPDOWN ---- */
 
 .menu .dropdown-menu {
-    display: none;              /* hidden by default */
+    display: none;
     position: absolute;
-    top: 100%;                  /* just below the parent li */
+    top: 100%;
     left: 0;
     background: white;
     padding: 10px 0;
@@ -99,7 +97,7 @@
 }
 
 .menu .dropdown-menu li {
-    margin: 0;                  /* reset margins inside dropdown */
+    margin: 0;
     padding: 5px 20px;
 }
 
@@ -107,11 +105,9 @@
     display: block;
 }
 
-/* Show dropdown on hover */
 .menu .dropdown:hover .dropdown-menu {
     display: block;
 }
-/* ---- END DROPDOWN ---- */
 
 .log{
     width: 100px;
@@ -216,33 +212,29 @@
     outline: none;
 }
 
-/* Outer slider area */
 .slider {
     width: 100%;
-    height: 150px;          /* adjust height */
+    height: 150px;
     overflow: hidden;
     position: relative;
 }
 
-/* Moving track */
 .slide-track {
     display: flex;
-    width: max-content;     /* auto width based on content */
+    width: max-content;
     animation: scroll 30s linear infinite;
 }
 
-/* One “group” = 2 images + text */
 .section {
     display: flex;
     align-items: center;
-    gap: 35px;              /* gap between image1, image2, text */
+    gap: 35px;
     padding-right: 60px; 
-    margin-top: 50px;   /* gap between group 1 and group 2 */
+    margin-top: 50px;
 }
 
-/* Images */
 .img {
-    width: auto;           /* fixed width so gaps are consistent */
+    width: auto;
     height: 100px;
     mix-blend-mode: multiply;
     filter: brightness(0.9) contrast(1.1);
@@ -250,7 +242,6 @@
     object-fit: cover;
 }
 
-/* Text block */
 .text-block {
     display: flex;
     flex-direction: column;
@@ -259,7 +250,7 @@
 .text-block p {
     margin: 0;
     font-size: 16px;
-    font-family: Arial, sans-serif;  /* change font here */
+    font-family: Arial, sans-serif;
     font-weight: bold;
     color: #192a6f;
 }
@@ -270,7 +261,7 @@
         transform: translateX(0);
     }
     100% {
-        transform: translateX(-25%); /* move left by one full set (because we duplicated it) */
+        transform: translateX(-25%);
     }
 }
 
@@ -310,7 +301,6 @@
     margin-bottom: 24px;
   }
   
-  /* RIGHT HALF: 2x2 GRID */
   .hero-right {
     flex: 1;
     display: grid;
@@ -318,7 +308,6 @@
     gap: 24px;
   }
   
-  /* Boxes */
   .box {
     background: #192a6f;
     color: #fff;
