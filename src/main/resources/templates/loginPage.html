@@ -1,11 +1,64 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Login Page</title>
+    <link rel = "stylesheet" href = "stylesLogin.css">
 </head>
 <body>
-    <h1 th:text="'Hello' + ${name}"></h1>
+    <div class="main">
+        <div class="loginPage">
+            <div class="icon">
+                <h1 class="logo" onclick="window.location.href='/'">MLB.</h1>
+            </div>
+        </div>
+
+        <div class="loginSetup">
+            <!-- LEFT HALF: CONTENT -->
+            <div class="setUp-left">
+                <img src="Images/LogoN.png" class="logo-img" alt="MLB Logo">
+                <br>
+                <h1><span class="oneS">Allocate Your Budget,</span><br>
+                  <span class = "twoS">Accordingly through<br> Master Life Budgeting.</span>
+                </h1>
+                <p>
+                  Spend your money with proper judgment,<br>
+                  while use your every taka according to need.
+                </p>
+            </div>
+        
+            <!-- RIGHT HALF: 4-GRID -->
+            <div class="setUp-right">
+              <h2>Login Here</h2>
+              <input type="email" name="email" placeholder="Enter email here">
+              <br>
+              <input type="password" name="" placeholder="Enter password here">
+              <br>
+              <div class="remember-container">
+                <input type="checkbox" id="remember" class="remember-box">
+                <span class="remember-text">Keep me logged in</span>
+                <h3 class="forgot">Forgot password?</h3>
+              </div>
+              <button class="logbtn" onclick="window.location.href='web';">Login</button>
+
+              <p class="link">Don't have an account?</p><br>
+              <span class="signup" onclick="window.location.href='signup';">Sign Up Here.</span>
+              <div class="line-with-or">
+                <span>or</span>
+              </div>
+
+              <div class="iconSocial">
+                <button class="social-btn apple-btn" onclick="window.location.href='https://account.apple.com/sign-in';">
+                    <ion-icon name="logo-apple"></ion-icon> Sign in with Apple
+                </button>
+            
+                <button class="social-btn google-btn" onclick="window.location.href='https://accounts.google.com/';">
+                    <ion-icon name="logo-google"></ion-icon> Sign in with Google
+                </button>
+            </div>            
+            </div>
+        </div>
+
+    </div>
+    <script src = "https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
 </body>
 </html>
