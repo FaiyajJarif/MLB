@@ -1,18 +1,17 @@
 package com.Eqinox.store.dtos;
 
-import java.time.LocalDateTime;
-
-import com.fasterxml.jackson.annotation.JsonFormat;
-
 import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 @AllArgsConstructor
+@NoArgsConstructor
 @Getter
+@Setter
 public class UserDto {
-    private Long id;
+    private Integer id;
     private String name;
     private String email;
-    // @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
-    // private LocalDateTime createdAt;
+    private Boolean isVerified;
 }

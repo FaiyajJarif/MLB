@@ -1,146 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Document</title>
-    <link rel = "stylesheet" href = "styles.css">
+  <meta charset="UTF-8" />
+  <title>Hishab Nikash</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-    <div class = "main">
-        <div class = "homePage">
+  <div class="main">
 
-            <div class="icon">
-                <a href="/">
-                    <img src="Images/LogoN.png" class="logo-img" alt="MLB Logo">
-                </a>
-            </div>
+    <!-- HEADER -->
+    <header class="homePage">
+      <div class="icon">
+        <a href="/">
+          <img src="Images/LogoN.png" class="logo-img" alt="Hishab Nikash Logo" />
+        </a>
+      </div>
 
-            <div class="menu">
-                <ul>
-                    <li><a href="#">What is MLB</a></li>
-            
-                    <li class="dropdown">
-                        <a href="#">Learn ▾</a>
-                        <ul class="dropdown-menu">
-                            <li><a href="#">Basics</a></li>
-                            <li><a href="#">Intermediate</a></li>
-                            <li><a href="#">Advanced</a></li>
-                        </ul>
-                    </li>
-            
-                    <li><a href="#">Share MLB</a></li>
-                    <li><a href="#">Pricing</a></li>
-                    <li><a href="#">For Employers</a></li>
-                </ul>
-            </div>
+      <nav class="menu">
+        <ul>
+          <li><a href="#">What is Hishab Nikash</a></li>
 
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle">Learn ▾</a>
+            <ul class="dropdown-menu">
+              <li><a href="#">Basics</a></li>
+              <li><a href="#">Intermediate</a></li>
+              <li><a href="#">Advanced</a></li>
+            </ul>
+          </li>
 
-            <div class="log">
-                <ul>
-                    <li><a href="login">LOGIN</a></li>
-                </ul>
-            </div>            
+          <li><a href="#">Share</a></li>
+          <li><a href="#">Pricing</a></li>
+          <li><a href="#">For Employers</a></li>
+        </ul>
+      </nav>
 
-            <button class="signup">Sign Up</button>
+      <div class="log">
+        <a href="/login">LOGIN</a>
+      </div>
 
+      <button class="signup" onclick="window.location.href='/signup'">Sign Up</button>
+    </header>
+
+    <!-- HERO CONTENT -->
+    <section class="content">
+      <div class="content-wrapper">
+
+        <div class="content-text">
+          <h1>Make life better <br /><span>with Hishab Nikash.</span></h1>
+          <p class="par">
+            Get Hishab Nikash. Get your Budget ready.<br />
+            <button class="signupA">Sign Up</button><br />
+            Get started today!
+          </p>
         </div>
-        <div class = "content">
-            <h1>Make life better <br><span> with MLB.</span></h1>
-            <p class = "par"> 
-                Get MLB. Get your Budget ready.<br>
-                <button class="signupA">Sign Up</button><br>
-                Get started today!
-            </p>
+
+        <div class="content-image">
+          <img src="Images/LogoN.png" alt="Hero" class="hero-img" />
         </div>
 
-        <div class="slider">
-            <div class="slide-track">
-          
-              <!-- GROUP 1 -->
-              <div class="section">
-                <img src="Images/UIUBlue.png" class="img" alt="">
-                <img src="Images/LogoN.png" class="img" alt="">
-                <div class="text-block">
-                  <p>Faiyaj</p>
-                </div>
-              </div>
-          
-              <!-- GROUP 2 (same as group 1 for seamless loop) -->
-              <div class="section">
-                <img src="Images/UIUBlue.png" class="img" alt="">
-                <img src="Images/LogoN.png" class="img" alt="">
-                <div class="text-block">
-                  <p>Faiyaj</p>
-                </div>
-              </div>
+      </div>
+    </section>
 
-              <div class="section">
-                <img src="Images/UIUBlue.png" class="img" alt="">
-                <img src="Images/LogoN.png" class="img" alt="">
-                <div class="text-block">
-                  <p>Faiyaj</p>
-                </div>
-              </div>
+    <!-- SLIDER -->
+    <section class="slider">
+      <div class="slide-track">
+        <div class="section"><img src="Images/LogoN.png" /></div>
+        <div class="section"><img src="Images/LogoN.png" /></div>
+        <div class="section"><img src="Images/LogoN.png" /></div>
+        <div class="section"><img src="Images/LogoN.png" /></div>
+        <div class="section"><img src="Images/LogoN.png" /></div>
+        <div class="section"><img src="Images/LogoN.png" /></div>
+      </div>
+    </section>
 
-              <div class="section">
-                <img src="Images/UIUBlue.png" class="img" alt="">
-                <img src="Images/LogoN.png" class="img" alt="">
-                <div class="text-block">
-                  <p>Faiyaj</p>
-                </div>
-              </div>
+    <!-- FEATURES -->
+    <section class="hero">
+      <div class="hero-left">
+        <h1>
+          <span class="oneS">How Does</span><br />
+          <span class="twoS">Hishab Nikash</span>
+        </h1>
+        <p>Makes your life better.<br />Let’s see today!</p>
+      </div>
 
-              <div class="section">
-                <img src="Images/UIUBlue.png" class="img" alt="">
-                <img src="Images/LogoN.png" class="img" alt="">
-                <div class="text-block">
-                  <p>Faiyaj</p>
-                </div>
-              </div>
+      <div class="hero-right">
+        <div class="box"><img src="Images/image1.png" /></div>
+        <div class="box"><img src="Images/image2.png" /></div>
+        <div class="box"><img src="Images/image3.png" /></div>
+        <div class="box"><img src="Images/image4.png" /></div>
+      </div>
+    </section>
 
-              <div class="section">
-                <img src="Images/UIUBlue.png" class="img" alt="">
-                <img src="Images/LogoN.png" class="img" alt="">
-                <div class="text-block">
-                  <p>Faiyaj</p>
-                </div>
-              </div>
-
-              <div class="section">
-                <img src="Images/UIUBlue.png" class="img" alt="">
-                <img src="Images/LogoN.png" class="img" alt="">
-                <div class="text-block">
-                  <p>Faiyaj</p>
-                </div>
-              </div>
-
-              <div class="section">
-                <img src="Images/UIUBlue.png" class="img" alt="">
-                <img src="Images/LogoN.png" class="img" alt="">
-                <div class="text-block">
-                  <p>Faiyaj</p>
-                </div>
-              </div>
-          
-            </div>
-          </div>   
-          
-        <div class="hero">
-            <div class="hero-left">
-                <h1><span class="oneS">How Does</span><br>
-                  <span class = "twoS">MLB</span>
-                </h1>
-                <p>
-                  Makes you life better ?.<br>
-                  Let's see today!
-                </p>
-            </div>
-            <div class="hero-right">
-              <div class="box">Text 1</div>
-              <div class="box">Text 2</div>
-              <div class="box">Text 3</div>
-              <div class="box">Text 4</div>
-            </div>
-        </div>
-    </div>
+  </div>
 </body>
 </html>

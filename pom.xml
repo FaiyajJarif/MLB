@@ -1,81 +1,66 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" 
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 
+                             https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
+
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
         <version>3.4.1</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
-    <groupId>com.codewithmosh</groupId>
+
+    <groupId>com.eqinox</groupId>
     <artifactId>store</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>store</name>
     <description>store</description>
-    <url/>
-    <licenses>
-        <license/>
-    </licenses>
-    <developers>
-        <developer/>
-    </developers>
-    <scm>
-        <connection/>
-        <developerConnection/>
-        <tag/>
-        <url/>
-    </scm>
+
     <properties>
         <java.version>23</java.version>
     </properties>
+
     <dependencies>
+        <!-- Spring Boot starters -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-test</artifactId>
-            <scope>test</scope>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
         <dependency>
-            <artifactId>spring-boot-starter-data-jpa</artifactId>
             <groupId>org.springframework.boot</groupId>
-        </dependency>
-        <dependency>
-            <artifactId>mysql-connector-j</artifactId>
-            <groupId>com.mysql</groupId>
-            <scope>runtime</scope>
-        </dependency>
-        <dependency>
-            <artifactId>flyway-core</artifactId>
-            <groupId>org.flywaydb</groupId>
-        </dependency>
-        <dependency>
-            <artifactId>flyway-mysql</artifactId>
-            <groupId>org.flywaydb</groupId>
-        </dependency>
-        <dependency>
-            <artifactId>lombok</artifactId>
-            <groupId>org.projectlombok</groupId>
-            <scope>annotationProcessor</scope>
+            <artifactId>spring-boot-starter-data-jpa</artifactId>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-thymeleaf</artifactId>
         </dependency>
+
+        <!-- Testing -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+
+        <!-- Lombok -->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <scope>annotationProcessor</scope>
+        </dependency>
+
+        <!-- MapStruct -->
         <dependency>
             <groupId>org.mapstruct</groupId>
             <artifactId>mapstruct</artifactId>
             <version>1.6.3</version>
         </dependency>
-
         <dependency>
             <groupId>org.mapstruct</groupId>
             <artifactId>mapstruct-processor</artifactId>
@@ -83,29 +68,61 @@
             <scope>provided</scope>
         </dependency>
 
+        <!-- PostgreSQL JDBC driver -->
+        <dependency>
+            <groupId>org.postgresql</groupId>
+            <artifactId>postgresql</artifactId>
+            <version>42.7.3</version>
+        </dependency>
+
+        <!-- Flyway for PostgreSQL -->
+        <dependency>
+            <groupId>org.flywaydb</groupId>
+            <artifactId>flyway-core</artifactId>
+            <version>10.22.0</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.security</groupId>
+            <artifactId>spring-security-crypto</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+             <artifactId>spring-boot-starter-mail</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.flywaydb</groupId>
+            <artifactId>flyway-database-postgresql</artifactId>
+        </dependency>
+
+
 
 
     </dependencies>
 
     <build>
         <plugins>
+            <!-- Flyway plugin configured for PostgreSQL -->
             <plugin>
                 <groupId>org.flywaydb</groupId>
                 <artifactId>flyway-maven-plugin</artifactId>
-                <version>10.15.0</version>
+                <version>10.23.0</version>
                 <configuration>
-                    <url>jdbc:mysql://localhost:3306/store_api?createDatabaseIfNotExist=true</url>
-                    <user>root</user>
-                    <password>MyPassword!</password>
+                    <url>jdbc:postgresql://localhost:5432/postgres</url>
+                    <user>postgres</user>
+                    <password>12345</password>
+                    <schemas>
+                        <schema>public</schema>
+                    </schemas>
                     <cleanDisabled>false</cleanDisabled>
                 </configuration>
             </plugin>
 
+            <!-- Spring Boot plugin -->
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
         </plugins>
     </build>
-
 </project>
