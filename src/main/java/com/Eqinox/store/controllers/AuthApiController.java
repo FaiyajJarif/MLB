@@ -32,7 +32,6 @@ public class AuthApiController {
     @Autowired
     private EmailService emailService;
 
-    // ---------- LOGIN (REST) ----------
     @PostMapping("/login")
     public ResponseEntity<ApiResponse> login(@RequestBody LoginRequest request) {
 
@@ -79,7 +78,6 @@ public class AuthApiController {
         String timezone = req.getTimezone();
         Integer budgetStartDay = req.getBudgetStartDay();
 
-        // 1. Basic validations
         if (name == null || name.isBlank()
                 || email == null || email.isBlank()
                 || password == null || password.isBlank()) {
@@ -92,16 +90,16 @@ public class AuthApiController {
                     .body(ApiResponse.failure("Passwords do not match"));
         }
 
-        // 2. Check if email already exists
+        // Check if email already exists
         if (userRepository.findByEmail(email).isPresent()) {
             return ResponseEntity.badRequest()
                     .body(ApiResponse.failure("Email already registered"));
         }
 
-        // 3. Hash password
+        // Hash password
         String hashedPassword = BCrypt.hashpw(password, BCrypt.gensalt());
 
-        // 4. Build user entity
+        // Build user entity
         User user = new User();
         user.setName(name);
         user.setEmail(email);
@@ -141,13 +139,12 @@ public class AuthApiController {
 
         tokenRepository.save(verificationToken);
 
-        // 8. Build verification link (adjust port if needed)
+        // Build verification link (adjust port if needed)
         String verificationLink = "http://localhost:8080/verify-email?token=" + token;
 
-        // TEMP: log link for debugging
         System.out.println("Verification link for " + savedUser.getEmail() + ": " + verificationLink);
 
-        // 9. Send email (ignore failure for now)
+        // Send email (ignore failure for now)
         try {
             emailService.sendVerificationEmail(savedUser.getEmail(), verificationLink);
         } catch (Exception e) {
